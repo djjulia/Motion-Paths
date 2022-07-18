@@ -1,0 +1,153 @@
+@charset "UTF-8";
+/* CSS Document */
+@font-face {
+  font-family: "REI Stuart Regular";
+  src: url('https://satchel.rei.com/media/font/REI_Stuart/REIStuart-Regular-Web.woff2') format('woff2'),
+    url('https://satchel.rei.com/media/font/REI_Stuart/REIStuart-Regular-Web.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: "REI Stuart Medium";
+  src: url('https://satchel.rei.com/media/font/REI_Stuart/REIStuart-Medium-Web.woff2') format('woff2'),
+    url('https://satchel.rei.com/media/font/REI_Stuart/REIStuart-Medium-Web.woff') format('woff');
+  font-weight: 500;
+  font-style: bold;
+  font-stretch: normal;
+}
+
+.stuart-regular {
+  font-family: "REI Stuart Regular";
+}
+.stuart-bold {
+  font-family: "REI Stuart Medium";
+}
+
+body
+{
+	margin:0;
+	padding:0;	
+}
+
+img
+{
+	border:0;	
+	padding:0;
+}
+
+br
+{
+	line-height: 31px;
+}
+
+#container
+{
+	position:relative;
+	width:728px;
+	height:90px;
+	border:1px solid #000000;
+	box-sizing:border-box;
+	overflow:hidden;
+	padding:0;
+	margin:0;
+	filter : alpha(opacity=0);
+	background-color:#f4f2ed;
+	-moz-opacity:0;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	opacity:0;	
+}
+
+#green_bg
+{
+	background-color:#1f513f;
+	width:300px;
+	height:250px;
+	z-index:4;
+}
+
+#txt1
+{
+	position:absolute;
+	top:31px;
+	left:132px;
+	font-size:31px;
+	font-family: "REI Stuart Regular", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	color:#1f513f;
+	z-index:1;	
+}
+
+#image1
+{
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:3;	
+}
+
+#image2
+{
+	position:absolute;
+	top:0px;
+	left:363px;
+	z-index:3;	
+}
+
+#txt2
+{
+	position:absolute;
+	top:31px;
+	left:76px;
+	font-size:31px;
+	font-family: "REI Stuart Regular", Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	color:#f4f2ed;
+	z-index:2;	
+}
+
+#txt3
+{
+	position:absolute;
+	top:28px;
+	left:250px;
+	z-index:5;	
+}
+
+
+#logo2
+{
+	position:absolute;
+	top:30px;
+	left:643px;
+	z-index:13;
+}
+
+
+#cta_inner1
+{
+	position:relative;
+	margin:8px auto auto 7px;
+	z-index:3;	
+}
+
+
+#cta
+{
+	position:absolute;
+	top:28px;
+	left:502px;
+	width:32px;
+	height:32px;
+	overflow:hidden;
+	background-image:url(cta_circle.png);
+	background-repeat:no-repeat;
+	z-index:3;	
+}
+
+.clickster {
+	border:0;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index:1234;
+	cursor:pointer;
+}

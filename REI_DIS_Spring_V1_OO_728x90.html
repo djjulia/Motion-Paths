@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>REI_DIS_Spring_V1_OO_728x90</title>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+<link rel="stylesheet" href="REI_DIS_Spring_V1_OO_728x90_style.css" type="text/css" />
+<script type="text/javascript" src="splittext.min.js"></script>
+<script type="text/javascript" src="MotionPathPlugin.min.js"></script>
+<script>
+window.onload = function(){	
+gsap.set("#container", {alpha:1});
+
+
+//Start Frame1
+let split = new SplitText("#txt1", { type: "words, chars" }), //matches div name
+    lineChars1 = split.chars, //change lineChars to match current number
+    lineCharsShuffled1 = gsap.utils.shuffle(lineChars1); //change lineCharsShuffled to match current number
+
+	//type blows off
+gsap.to(lineCharsShuffled1, { 
+  rotationX: 360*3, rotationY: 360*2, // more turns
+  opacity:0,
+  motionPath:{
+    path:[ {x:-400, y:-200}, {x:-400, y:-300}], //motion path that letters travel on, can be adjusted by altering the numbers
+    curviness:0.5
+  },
+  stagger: 
+    function(index, target, list) {
+    return index * 0.07; //delay between each letter
+  },
+  duration: 1,  ease: "power2.in", //duration of letters to leave screen
+  delay:2 //delay from start
+});
+
+//End Frame1
+
+gsap.from("#image1", {duration:1.5, alpha:0, delay:4.25}); 
+gsap.from("#image2", {duration:1.5, alpha:0, delay:4.25}); 
+
+gsap.to("#image1", {x:-730, duration:.75, delay:6.5}); 
+gsap.to("#image2", {x:-730, duration:.75, delay:6.5}); 
+
+	
+//Start Frame 3 green background and txt2
+gsap.to("#container", {backgroundColor: "#1f513f", duration:0,  delay:6.5});
+gsap.from("#txt2", {x:728, duration:1, delay:6.5});	
+//End Frame 3
+
+	
+//Start Frame4 sprite 2 and optoutside logo
+gsap.to("#txt2", {x:-728, duration:.75,  delay:9.0}); //txt2 leaves stage
+gsap.from("#logo2", {x:728, duration:.75, delay:10.0});
+gsap.from("#txt3", {x:728, duration:1, delay:9.0});
+  //cta 
+gsap.from("#cta", {duration:1, x:728, delay:9.5});
+gsap.to("#cta_inner1",  {duration:.5, x:"+=50", ease: "none", delay:10.5});
+gsap.set("#cta_inner1", {x:"-=100", delay:11});
+gsap.to("#cta_inner1", {duration:.5, x:"+=50", ease:"none", delay:11});
+gsap.to("#cta_inner1", {duration:.5, x:"+=50", ease:"none", delay:11.5});
+gsap.set("#cta_inner1", {x:"-=100", delay:12});
+gsap.to("#cta_inner1",  {duration:.5, x:"+=50", ease:"none", delay:12});
+//End
+
+	
+}
+	
+
+</script> 
+<meta name="ad.size" content="width=728,height=90">
+                <script type="text/javascript">
+                var clickTag = ""; </script>
+</head>
+
+<body>
+<div id="container">
+<div class="clickster">
+      <a href="javascript:window.open(window.clickTag)">
+			<img src="dclk.png" alt="clickthru" />
+      </a>
+</div>
+	<!--start frame 1 -->
+	<div id="txt1">
+		<span class="stuart-bold">Outside You</span> rides like the wind
+	</div>
+
+	<!-- end frame 1 
+    start frame 2 -->
+
+	<!-- end frame 2 
+    start frame 3 -->
+	<div id="txt2">
+		<span class="stuart-regular">Discover the outside version of yourself</span>
+	</div>
+  <div id="image1">
+    <img src="image1.jpg" alt="three people riding bikes along a boardwalk with the sun setting behind them"/>
+  </div>
+  <div id="image2">
+    <img src="image2.jpg" alt="three people taking a break on bikes to enjoy the view"/>
+  </div>
+	<!-- end frame 3 
+    start frame 4 -->
+
+	<div id="txt3">
+		<img src="optoutside.png" alt="Opt Outside" />
+	</div>
+	<div id="cta">
+    	<div id="cta_inner1">
+        	<img src="cta_arrow.png"  alt="click here" />
+        </div>
+	</div>
+    <div id="logo2">
+		<img src="logo_white.png" alt="rei logo" />	
+	</div>  
+	<!-- end -->
+</div>
+</body>
+</html>
